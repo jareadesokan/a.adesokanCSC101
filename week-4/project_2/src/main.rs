@@ -29,6 +29,6 @@ fn main() {
         incentive = 100_000;
     }
 
-    // Output the incentive
+    
     println!("The annual incentive for the employee is: N{}", incentive);
 }
