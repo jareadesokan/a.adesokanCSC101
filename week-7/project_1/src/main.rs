@@ -63,7 +63,7 @@ fn cube()->f32{
     println!("Enter the value of the  side: ");
     io::stdin().read_line(&mut a).expect("Not a valid input");
     let a:f32 = a.trim().parse().expect("Not a valid integer");
-    let area = a * a * 6.0 ;
+    let area = a.powf(2.0) * 6.0 ;
     println!("Your area is {}", area);
     return area;
    
@@ -98,31 +98,28 @@ fn main() {
     io::stdin().read_line(&mut choice).expect("Not a valid input");
     let choice:i32 = choice.trim().parse().expect("Not a valid integer");
 
-    for choice in 1 .. 6 {
+    
         if choice == 1{
              trapezium();
-             break;
+             
         }
         else if choice == 2{
              rhombus();
-             break;
+             
         }
-        else if choice == 4{
+        else if choice == 3{
              parallelogram(); 
-             break;
+             
         }
         else if choice == 4{
              cube();
-             break; 
+              
         }
         else if choice == 5{
             cylinder();
-            break;
+            
         }
         else {
             println!("Not a valid input");
-            break;
         }
-    }
-
 }
